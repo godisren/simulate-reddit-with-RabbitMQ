@@ -1,7 +1,8 @@
 # Simulate Simple Reddit with RabbitMQ
 
-To try to implement a simple website with a message queue like Reddit sharing contents by posting text.<br>
+To try to implement a simple website like Reddit sharing contents by posting text.<br>
 The architecture is designed by separating Front-End and Back-End service.<br>
+I also used a message queue for scalability.<br>
 The Back-End service has two parts. One service serves Front-End, and the other one<br>
 is a comsumer of a message qeueu for creating post.<br>
 
@@ -30,6 +31,7 @@ To lauch a RabbitMQ container
 docker run -d --hostname my-rabbit --name my-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 ```
 
+
 To start Back-End RESTful API
 ``` bash
 cd reddit-backend-master
@@ -41,6 +43,7 @@ To start Back-End Queue Worker
 cd reddit-backend-master
 gradle reddit-backend-worker:bootRun
 ```
+note : We can lauch many web and worker services for high-throughput request
 
 To start Front-End
 ``` bash
