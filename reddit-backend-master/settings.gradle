@@ -1,0 +1,6 @@
+rootProject.name = 'reddit-backend-master'
+
+include   ':reddit-backend-commons',':reddit-backend-web',':reddit-backend-worker'
+project(':reddit-backend-commons').projectDir = new File(settingsDir, '../reddit-backend-commons')
+project(':reddit-backend-web').projectDir = new File(settingsDir, '../reddit-backend-web')
+project(':reddit-backend-worker').projectDir = new File(settingsDir, '../reddit-backend-worker')
