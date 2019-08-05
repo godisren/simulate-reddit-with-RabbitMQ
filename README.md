@@ -1,15 +1,16 @@
 # Simulate Simple Reddit with RabbitMQ
 
-To try to implement a simple website like Reddit sharing contents by posting text.<br>
+This project is created to get experience in Spring boot with RabbitMQ.<br>
+This is a simple website such as Reddit sharing contents by posting text.<br>
 The architecture is designed by separating Front-End and Back-End service.<br>
-I also used a message queue for scalability.<br>
+I use a message queue for scalability.<br>
 The Back-End service has two parts. One service serves Front-End, and the other one<br>
 is a comsumer of a message qeueu for creating post.<br>
 
-Define structure : <br>
+<b>Structrue</b> : <br>
 <b>reddit-frontend</b> represents UI presentation layer.<br>
 <b>reddit-backend-master</b> is a gradle root project.<br>
-<b>reddit-backend-commons</b> is a sharing library for all subprojects.<br>
+<b>reddit-backend-commons</b> is a sharing library for all projects.<br>
 <b>reddit-backend-web</b> represents a stateless Back-End service with RESTFul APIs.<br>
 <b>reddit-backend-worker</b> is responsible for creating a post which received from reddit-backend-web by message queue.<br>
 
